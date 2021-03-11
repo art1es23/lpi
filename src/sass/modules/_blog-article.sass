@@ -1,0 +1,41 @@
+@import "../helpers/var"
+
+.blog-articles
+    width: 100%
+    display: flex
+
+    &--wrapper
+        width: 70%
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        padding: 5% 0
+
+    &__title
+        font-size: 2.5rem
+
+.articles-group
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    padding: 2.5% 0
+
+    &__item
+        display: flex
+        width: 50%
+        padding: 1.5% 5% 1.5% 0
+        margin: 0 auto
+        justify-content: space-between
+
+.article
+    &__icon
+        background: $light-blue url('../img/5.png') center / cover no-repeat
+        width: 15%
+        height: 5rem
+        display: inline-block
+
+    &__legend
+        display: flex
+        align-items: center

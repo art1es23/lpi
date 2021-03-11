@@ -1,0 +1,138 @@
+@import "./src/sass/helpers/var"
+
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  display: flex
+  flex-direction: column
+  overflow-x: hiddenbody
+  color: $black
+  font-family: "Montserrat"
+
+section
+  width: 100%
+
+h1, h2, h3, h4
+  color: $black
+
+a
+  text-decoration: none
+  color: $blue
+  transition: all 0.3s ease-in-out
+  &:hover
+    color: $light-blue
+
+ul
+  list-style: none
+
+.container
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  width: 85%
+  height: 100%
+
+.main-content
+  width: 100%
+
+.title
+  text-transform: uppercase
+  font-weight: 700
+
+.bold
+  font-weight: 600
+
+.breadcrumbs
+  display: flex
+  margin: 2.5% 0
+  font-size: 1.25vw
+
+  &__link .bold
+    color: $sand-olive
+
+.transition
+  display: flex
+  position: fixed
+  z-index: 9999
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  margin: 0
+  pointer-events: none
+
+  li
+    transform: scaleY(0)
+    background-color: $orange
+    transform-origin: bottom left
+    height: 100%
+    width: 20%
+
+.scroll--hidden
+  overflow: hidden
+
+.loader
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  pointer-events: none
+  z-index: 9999
+  visibility: hidden
+  opacity: 0
+  background-color: orange
+
+.scroll-up
+  position: absolute
+  top: 0
+  right: 7.5%
+  transform: translateY(-100%)
+  background-color: #434344
+  width: 3.5vw
+  height: 2.5vw
+  display: flex
+  justify-content: center
+  align-items: center
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+
+  &__link
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50%
+    height: 50%
+    background:
+      image: url("../img/sprite.svg#up-arrow")
+      repeat: no-repeat
+      size: contain
+      position: center
+
+// @media screen and (max-width: 1224px)
+//   .scroll-up
+//     width: 5vw
+//     height: 3.75vw
+
+// @media screen and (max-width: 1024px)
+//   .link
+//     width: 17.5vw
+//     padding: 0.75rem 1rem
+//     font-size: 2vw
+// @media screen and (max-width: 768px)
+//   .link
+//     width: 20vw
+//     font-size: 2.5vw
+
+//   .breadcrumbs
+//     font-size: 2.25vw
+
+// @media screen and (max-width: 480px)
+//   .link
+//     width: 50vw
+//     font-size: 4vw
+//   .breadcrumbs
+//     font-size: 3.5vw

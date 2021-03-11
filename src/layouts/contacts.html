@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+<body data-barba="wrapper">
+
+    <header id="header" class="header">
+        <div class="logo">
+            <a href="./index.html" class="logo__link img-wrapper">
+                <img src="./img/logo.png" alt="">
+            </a>
+        </div>
+        <a class="menu"><span></span></a>
+    
+        <nav class="navigation">
+            <ul class="navigation--wrapper">
+                <li class="navigation__item"><a href="./index.html" class="navigation__link">Головна</a></li>
+                <li class="navigation__item"><a href="./about.html" class="navigation__link">Про нас</a></li>
+                <li class="navigation__item">
+                    <a href="./products.html" class="navigation__link">Продукція</a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Submenu Link</a>
+                            <ul>
+                                <li><a href="">Dropdown link</a></li>
+                                <li><a href="">Dropdown link</a></li>
+                                <li><a href="">Dropdown link</a></li>
+                                <li><a href="">Dropdown link</a></li>
+                                <li><a href="">Dropdown link</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Submenu Link</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Submenu Link</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Submenu Link</a></li>
+                        <li class="submenu__item"><a href="" class="submenu__link">Submenu Link</a></li>
+                    </ul>
+                </li>
+                <li class="navigation__item"><a href="./blog.html" class="navigation__link">Блог</a></li>
+                <li class="navigation__item"><a href="./shop.html" class="navigation__link">Магазин</a></li>
+                <li class="navigation__item"><a href="./downloads.html" class="navigation__link">Завантажити</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+            </ul>
+        </nav>
+    
+        <div class="chooseLanguage">
+            <button class="chooseLanguage__item">UA</button>
+            <button class="chooseLanguage__item">RU</button>
+            <button class="chooseLanguage__item">EN</button>
+        </div>
+    
+    </header>
+    
+    <main id="mainContent" class="main-content">
+        
+        <section class="map">
+            <h2 class="contacts__title title">Контакти</h2>
+            
+            <div class="map--wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82335.13689665173!2d24.032146747828627!3d49.842964315959065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c09109a57%3A0x4223c517012378e2!2z0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1597744761445!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </section>
+
+        <section class="location">
+            <div class="location--wrapper">
+                <h2 class="location__title title">Локація</h2>
+                <div class="location__footer footer-description">
+                    <h3 class="footer-description__title"></h3>
+                    
+                    <div class="footer-footer-description__address footer-address">
+                        <span class="footer-address__item">вул.В.Великого, 52</span>
+                        <span class="footer-address__item">м.Львів, 79053</span>
+                        <span class="footer-address__item">Україна</span>
+                    </div>
+
+                    <div class="footer-description__contacts footer-contacts">
+                        <div class="footer-contacts__item contacts-link">
+                            <span class="contacts-link__caption">Приймальна:</span>
+                            <a href="" class="contacts-link__item">+38(032)263-35-55</a>
+                        </div>
+                        <div class="footer-contacts__item contacts-link">
+                            <span class="contacts-link__caption">Факс:</span>
+                            <a href="" class="contacts-link__item">+38(032)241-79-80</a>
+                        </div>
+                        <div class="footer-contacts__item contacts-link">
+                            <span class="contacts-link__caption">Відділ продажу:</span>
+                            <a href="" class="contacts-link__item">+38(067)354-07-99</a>
+                        </div>
+                        <div class="footer-contacts__item contacts-link">
+                            <span class="contacts-link__caption">Відділ маркетингу:</span>
+                            <a href="" class="contacts-link__item">+38(098)684-86-07</a>
+                        </div>
+                        <div class="footer-contacts__item contacts-link">
+                            <span class="contacts-link__caption">Email:</span>
+                            <a href="" class="contacts-link__item">inaj@lpi.com, office@lpi.cpm.ua</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" method="post" role="form" class="contacts-form" id="contacts-form">
+                <h1 class="contacts-form__title">Залиште свої дані, задля отримання детальної інформації</h1>
+    
+                <input class="contacts-form__input" type="text" id="name" placeholder="Імʼя" name="name" required>
+                <input class="contacts-form__input" type="text" id="email" placeholder="Еmail" name="email" required>
+                <input class="contacts-form__input" type="text" id="phone" placeholder="Телефон" name="phone" required>
+    
+                <label for="content-topic"></label>
+                <textarea name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
+                <label for="content-comment"></label>
+                <textarea name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
+                <button type="submit" class="contacts-form__submit">Відправити</button>
+            </form>
+    
+        </section>
+                
+    </main>
+
+
+    <footer id="footer" class="footer">
+            <p class="copyright">&copy; qmpwwsd</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

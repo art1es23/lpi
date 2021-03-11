@@ -1,0 +1,1 @@
+{"version":3,"sources":["modules/main-header.sass"],"names":[],"mappings":"AAEA,aACI,WAAA,MACA,iBAAA","file":"main-header.min.css","sourcesContent":["@import \"../helpers/var\";\n\n.main-header {\n    min-height: 100vh;\n    background-color: $blue; }\n"]}

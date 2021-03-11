@@ -1,0 +1,200 @@
+@import "../helpers/var"
+
+.services
+    width: 100%
+    display: flex
+
+    &--wrapper
+        display: flex
+        flex-direction: column
+        width: 70%
+        margin: 0 auto
+        padding: 2.5% 0
+
+    &__title
+        font-size: 2.5rem
+        padding: 5% 0
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+
+.services-box-group
+    background-position: 10% center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 5% 0
+
+    display: flex
+    flex-wrap: wrap
+
+    &__item
+        display: flex
+        width: 45%
+        margin: auto
+        align-items: center
+        justify-content: flex-end
+        text-align: center
+        padding: 5% 2.5%
+        transition: all 0.3s ease
+        text-transform: uppercase
+        position: relative
+        background-color: #def1fc
+        box-shadow: 15px 15px 25px 0 rgba(0,0,0,0.25)
+        &:nth-child(n)
+            margin: -5rem auto auto 0
+
+        &:nth-child(2n)
+            margin: 15rem 0 auto auto
+
+        &:first-child
+            margin-top: 0
+
+        &:last-child
+            margin: -5rem auto 0
+            transform: translateX(-62.5%)
+
+        &:hover
+            background-color: rgba(222, 241, 252, 0.5)
+            cursor: default
+            transition: all 0.3s ease
+            box-shadow: 0 0 2px 5px rgba(0,0,0,0.1)
+
+.services-description
+    &__number
+        position: absolute
+        display: flex
+        top: 0
+        left: 0
+        color: $light-blue
+        font-size: 5rem
+        font-weight: 700
+        transform: translate(30%, -50%)
+
+    &--wrapper
+        display: flex
+        flex-direction: column
+        height: 100%
+        padding: 0 2.5%
+        justify-content: space-evenly
+        width: 100%
+        text-align: left
+
+    &__arrow
+        position: absolute
+        bottom: 0
+        right: 0
+        transform: translate(-25%, 40%)
+        display: flex
+        font-size: 6rem
+        color: #4c66a6
+        font-weight: bold
+        height: 7.5rem
+        width: 7.5rem
+        transition: all 1s ease-in-out
+        animation: reverseTranslateRight 1s ease-in-out forwards
+
+        svg
+            width: 100%
+            height: 100%
+
+    &__icon
+        margin: 5% auto
+        height: 10rem
+        width: 6.5rem
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
+        &1
+            background-image: url("../img/logo1.png")
+        &2
+            background-image: url("../img/logo2.png")
+        &3
+            background-image: url("../img/logo3.png")
+        &4
+            background-image: url("../img/logo4.png")
+        &5
+            background-image: url("../img/logo5.png")
+
+    &__title
+        font-size: 1.35rem
+        font-weight: 500
+        line-height: 1.5rem
+
+    &__legend
+        text-align: justify
+        font-size: 1rem
+        text-transform: none
+        margin: 1.5rem auto
+        line-height: 1.35rem
+
+    &__link
+        padding: 1rem
+        color: $blue
+        transform: scale(0)
+        text-decoration: none
+        width: 100%
+        text-align: center
+        font-size: 1rem
+        border: 1px solid #6993fe
+
+    &:hover
+        & .services-description__link
+            transform: scale(1)
+            transition: all 0.3s ease
+
+        & .services-description__arrow
+            transition: all 1s ease-in-out
+            animation: arrowTranslateRight 0.3s ease-in-out forwards
+
+    &:nth-child(2n)
+        & .services-description__arrow
+            animation: reverseTranslateLeft 0.3s ease-in-out forwards
+            left: 10%
+            svg
+                transform: rotateY(180deg)
+                left: 0
+        &:hover
+            & .services-description__arrow
+                animation: arrowTranslateLeft 0.3s ease-in-out forwards
+
+    &:last-child
+        & .services-description__arrow
+            display: none
+
+.services__link
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    &-item
+        font-size: 1rem
+        display: inline-block
+
+@keyframes arrowTranslateRight
+    from
+        transform: translate(-25%, 40%)
+
+    to
+        transform: translate(0, 40%) rotateZ(-90deg)
+
+@keyframes arrowTranslateLeft
+    from
+        transform: translate(0, 40%)
+
+    to
+        transform: translate(-50%, 40%) rotateZ(90deg)
+
+@keyframes reverseTranslateRight
+    from
+        transform: translate(0, 40%) rotateZ(-90deg)
+
+    to
+        transform: translate(-25%, 40%)
+
+@keyframes reverseTranslateLeft
+    from
+        transform: translate(-50%, 40%) rotateZ(90deg)
+
+    to
+        transform: translate(0, 40%)

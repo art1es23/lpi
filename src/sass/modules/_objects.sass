@@ -1,0 +1,39 @@
+
+@import "../helpers/_var"
+
+.object
+    width: 100%
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    width: 85%
+    margin-left: auto
+
+    &__title
+        width: 100%
+        justify-content: center
+        align-items: center
+        font-size: 3rem
+
+.object-box
+    display: flex
+    width: 100%
+    // min-height: 10vw
+    justify-content: center
+    // align-items: center
+
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        background: $light-blue url('../img/5.png') center / 100% 100% no-repeat
+        // padding: 0 0 22.5vw
+        flex: 0 1 calc( 100% / 3 )
+        // min-height: 15vw
+
+        &--big
+            flex: 2 1 calc(100% / 3)
+        &--center
+            margin-bottom: -10vw
+        &--bottom
+            margin-bottom: -20vw

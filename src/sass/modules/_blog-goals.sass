@@ -1,0 +1,35 @@
+@import "../helpers/var"
+
+.blog-goals
+    width: 100%
+    display: flex
+
+.goals-group
+    width: 70%
+    margin: 0 auto
+    display: flex
+    padding: 5% 0
+
+    &__item
+        display: flex
+        flex-direction: column
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        text-align: center
+
+.goals-description
+    &__icon
+        height: 1.5rem
+        width: 1.5rem
+        background: url('../img/goals__icon1.png') center / cover no-repeat
+
+    &__number
+        font-size: 2rem
+        font-weight: 700
+        padding: 1rem 0
+        color: $blue
+
+    &__legend
+        color: $blue
+        font-weight: 500

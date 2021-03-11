@@ -1,0 +1,83 @@
+@import "../helpers/var"
+
+.hero
+  min-height: 100vh
+  width: 100%
+  display: flex
+
+  &--wrapper
+    display: flex
+    width: 75%
+    margin: 0 auto
+    padding: 10% 0
+    justify-content: center
+    align-items: flex-start
+
+.about
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding: 0 10%
+
+  &__title,
+  &__description
+    line-height: 2rem
+    text-align: justify
+
+  &__title
+    font-size: 1.25rem
+    font-weight: 500
+
+  &__description
+    font-size: 1vw
+    padding: 0.75rem 0
+
+  &__link
+    display: flex
+    width: 35%
+    margin-top: 0.5rem
+
+.hero-link
+  display: flex
+  width: 100%
+  height: 100%
+  justify-content: center
+  align-items: center
+
+  &__item
+    width: 75%
+    height: 100%
+    background: $light-blue url('../img/5.png') center / 100% 100% no-repeat
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    text-decoration: none
+    transition: background-size 0.3s ease-in-out
+
+  &:hover
+    & .hero-link__item
+      background-size: 105% 105%
+    & .hero-link__icon
+      color: $light-blue
+
+  &__caption
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $white
+    font-size: 2rem
+    font-weight: 500
+    padding: 1.5rem
+    width: 50%
+
+  &__icon
+    width: 25%
+    height: 25%
+    background-color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    font-size: 2.5rem
+    color: $black
+    transition: color 0.3s ease-in-out

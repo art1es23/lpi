@@ -1,0 +1,100 @@
+@import "../helpers/var"
+
+.location
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 2.5% 0 0
+    background: $blue url('../img/project__map.png') 90% center / 45% no-repeat
+
+    &--main
+        color: $black
+        padding: 2.5% 0
+        background: $white url('../img/map.png') right center / 50% no-repeat
+
+        .location__link-item
+            color: $black
+
+        .footer-description__title
+            color: $black
+            margin: 5rem 0 0
+            font-size: 1.35rem
+
+        .footer-address__item
+            color: $black
+
+        .contacts-link
+            &__caption,
+            &__item
+                color: $black
+
+    &--wrapper
+        width: 70%
+        display: flex
+        flex-direction: column
+        margin: 0 auto 0 15%
+
+    &__title
+        font-size: 2.75rem
+        width: 100%
+        display: flex
+        text-align: left
+
+    &__link
+        margin: 1rem 0
+        &-item
+            text-decoration: underline
+            line-height: 1.25rem
+            font-size: 1rem
+            padding: 0.5rem 0
+            color: $white
+
+            &:hover
+                color: $light-blue
+
+.footer-description
+    display: flex
+    flex-direction: column
+    width: 50%
+
+    &__title
+        display: flex
+        width: 100%
+        font-size: 1.25rem
+        line-height: 1.75rem
+        font-weight: 600
+        text-transform: uppercase
+        color: $white
+
+.footer-address
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 2rem 0
+
+    &__item
+        display: inline-block
+        font-size: 1rem
+        line-height: 1.25rem
+        color: $white
+
+.footer-contacts
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    &__item
+        display: flex
+        width: inherit
+        flex-direction: column
+
+.contacts-link
+    &__caption
+        font-size: 1rem
+        line-height: 1.5rem
+        color: $white
+
+    &__item
+        font-size: 1rem
+        line-height: 1.5rem
+        color: $white
