@@ -1,6 +1,10 @@
+import './modules/slick-slider';
+import navMenu from './modules/navMenu';
+import modals from './modules/modalForm';
 
-"use sctrict";
+document.addEventListener('DOMContentLoaded', () => {
+    "use sctrict";
 
-const category = 'toys';
-
-console.log(category);
+    navMenu('.header', '.navigation', '.link', 'header--adaptive', 'header--fixed');
+    modals();
+});

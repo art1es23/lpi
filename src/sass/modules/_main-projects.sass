@@ -9,26 +9,27 @@
 
     &--wrapper
         display: flex
-        width: 70%
+        width: 75%
         flex-direction: column
         margin: 0 auto
-        padding: 5% 0
+        padding: 5% 0 0
 
     &__title
-        font-size: 2.75rem
+        font-size: calc(0.25rem + 2.5vw)
         width: 100%
+        line-height: calc(0.5rem + 2.5vw)
 
 .projects-box
     display: flex
     width: 100%
     flex-direction: column
-    padding: 2.5% 0
+    padding: 5% 0
 
     &__item
         display: flex
         width: 100%
         // justify-content: center
-        padding: 2.5% 0
+        // padding: 2.5% 0
 
         &--left
             flex-direction: row
@@ -36,6 +37,7 @@
             justify-content: center
             & .project-description
                 margin: 0 5%
+                margin-bottom: calc(0.5rem + 5vw)
                 justify-content: flex-end
 
         &--right
@@ -54,11 +56,13 @@
         flex-direction: column
         align-items: flex-start
         position: relative
+        width: 40%
 
 .project-hero
     &__img
-        flex-basis: 25vh
+        // flex-basis: 25vh
         display: flex
+
         background: $light-blue
         img
             width: 100%
@@ -70,30 +74,105 @@
         top: 5%
         left: 5%
         color: $black
-        padding: 0.75rem 1.25rem
+        padding: calc(0.5rem + 0.5vw) calc(0.5rem + 1vw)
         background-color: rgba($white, 0.35)
-        font-size: 1.5rem
         border-radius: 5px
         width: 50%
-        line-height: 2rem
+        line-height: calc(0.5rem + 2vw)
+        font-size: calc(0.25rem + 1.25vw)
 
     &__link
         display: flex
-        padding: 1.25rem 0.75rem 1.25rem 0
-        width: 100%
+        padding: calc(0.5rem + 1vw) calc(0.5rem + 0.5vw) calc(0.5rem + 2vw) 0
+        margin: calc(0.5rem + 0.75vw) 0
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
 
 .project-description
     display: flex
     flex-direction: column
-    width: 35%
+    width: 40%
     margin: 0 auto
 
     &__link
         text-align: left
         display: flex
-        font-size: 2.5rem
-        font-weight: 500
+        font-size: calc(0.25rem + 2.25vw)
+        font-weight: 600
+        line-height: calc(0.5rem + 2.25vw)
 
     &__legend
-        padding: 2.5rem 0
-        line-height: 1.5rem
+        padding: calc(0.5rem + 2vw) 0 calc(0.5rem + 2.5vw)
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
+
+@media screen and ( max-width: 1224px)
+    .main-projects
+        &--wrapper
+            width: 85%
+
+@media screen and ( max-width: 768px)
+    .project
+        &-description
+            width: 50%
+            &__link
+                font-size: calc(1.5rem + 0.5vw)
+
+            &__legend
+                font-size: calc(0.5rem + 0.75vw)
+                line-height: calc(0.5rem + 1.25vw)
+
+        &-hero
+            &__caption
+                line-height: calc(0.5rem + 2vw)
+                font-size: calc(0.25rem + 1.75vw)
+                width: 75%
+
+            &__link
+                line-height: calc(0.5rem + 0.75vw)
+                font-size: calc(0.25rem + 1.25vw)
+
+@media screen and ( max-width: 675px)
+    .projects-box
+        &__item
+            align-items: center
+            flex-direction: column
+
+            &--left,
+            &--center,
+            &--right
+                margin: calc(0.5rem + 1vw) 0
+
+                & .project-description
+                    align-items: center
+                    justify-content: center
+                    text-align: center
+
+    .project
+        &__item
+            width: 60%
+
+        &-description
+            width: 80%
+            &__link
+                text-align: center
+                font-size: calc(1.5rem + 0.5vw)
+                line-height: calc(1.5rem + 0.75vw)
+
+            &__legend
+
+                align-items: center
+                justify-content: center
+                font-size: calc(0.5rem + 0.75vw)
+                line-height: calc(0.5rem + 1.25vw)
+                text-align: center
+
+        &-hero
+            &__caption
+                line-height: calc(0.5rem + 2vw)
+                font-size: calc(0.25rem + 1.75vw)
+                width: 50%
+
+            &__link
+                line-height: calc(0.5rem + 0.75vw)
+                font-size: calc(0.25rem + 1.25vw)

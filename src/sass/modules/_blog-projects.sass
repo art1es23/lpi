@@ -1,0 +1,101 @@
+@import "../helpers/var"
+
+.blog-projects
+    width: 100%
+    display: flex
+
+    &--wrapper
+        width: 75%
+        margin: 0 auto
+        display: flex
+
+.blog-slider
+    width: 65%
+    position: relative
+    display: flex
+
+    &__slide
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        width: 100%
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    & .slick
+        &-slide
+            margin: 0 auto
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+
+        &-arrow
+            position: absolute
+            top: 0
+            z-index: 10
+            padding: calc(0.5rem + 0.5vw) calc(0.25rem + 0.25vw)
+            width: 5%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            border: none
+            font-size: 0
+            transition: all 0.3s ease-in-out
+
+            &:hover
+                cursor: pointer
+                background-color: rgba($light-blue, 0)
+
+        &-prev
+            transform: translateX(-50%)
+            left: 0
+            background: rgba($white, 0.35) url('../img/sprite.svg#sl-arrow_l') center / 50% no-repeat
+            &:hover
+                background-image: url('../img/sprite.svg#sl-arrow_l')
+        &-next
+            transform: translateX(50%)
+            background: rgba($white, 0.35) url('../img/sprite.svg#sl-arrow_r') center / 50% no-repeat
+            right: 0
+            &:hover
+                background-image: url('../img/sprite.svg#sl-arrow_r')
+
+.blog-projects-description
+    width: 30%
+    margin-left: 5%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+
+    &__title
+        font-size: calc(0.25rem + 1.25vw)
+        line-height: calc(0.5rem + 1.75vw)
+
+    &__legend
+        margin: calc(0.5rem + 2.25vw) 0
+        // text-align: right
+        font-size: calc(0.25rem + 0.7vw)
+        line-height: calc(0.5rem + 1.25vw)
+
+    &__link
+        padding: calc(0.5rem + 0.5vw) calc(0.5rem + 0.75vw)
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        border: 1px solid $light-blue
+        font-size: calc(0.25rem + 0.6vw)
+        line-height: calc(0.5rem + 0.75vw)
+
+@media screen and ( max-width: 1224px)
+    .blog-projects
+        &--wrapper
+            width: 85%

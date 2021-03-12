@@ -4,36 +4,109 @@
 .object
     width: 100%
     display: flex
-    min-height: 100vh
+    // min-height: 100vh
     flex-direction: column
-    width: 85%
+    width: 87.5%
     margin-left: auto
+    margin-bottom: 5%
+    position: relative
 
     &__title
         width: 100%
         justify-content: center
         align-items: center
-        font-size: 3rem
+        font-size: calc(0.25rem + 2.5vw)
+        line-height: calc(0.5rem + 2.75vw)
+
+    &__blockquote
+        bottom: 7.5%
+        left: 55%
+        position: absolute
+        border-left: 5px solid rgba($black, 0.35)
+        padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.5vw)
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
 
 .object-box
     display: flex
     width: 100%
-    // min-height: 10vw
-    justify-content: center
-    // align-items: center
+    height: 100%
+    // min-height: 30vw
+    justify-content: space-between
+    align-items: center
+    margin: 0 0 15% 0
 
     &__item
         display: flex
         justify-content: space-between
-        align-items: flex-start
-        background: $light-blue url('../img/5.png') center / 100% 100% no-repeat
-        // padding: 0 0 22.5vw
-        flex: 0 1 calc( 100% / 3 )
-        // min-height: 15vw
+        align-items: center
+        position: relative
+        transition: all 0.3s ease-in-out
+        &:hover
+            cursor: pointer
 
         &--big
-            flex: 2 1 calc(100% / 3)
+            // flex: 2 1 calc(100% / 3)
         &--center
-            margin-bottom: -10vw
+            transform: translateY(20%)
         &--bottom
-            margin-bottom: -20vw
+            transform: translateY(40%)
+
+.object-description
+
+    &__img
+        display: flex
+        position: relative
+        width: 100%
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &--wrapper
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        padding: 7.5%
+        transition: all 0.3s ease-in-out
+        background-image: linear-gradient(to bottom, rgba($light-blue, 1) 0%, rgba($light-blue, 0.0001) 100%)
+
+    &__title
+        font-size: calc(0.25rem + 1.5vw)
+        color: $white
+        line-height: calc(0.5rem + 2vw)
+        display: inline-block
+
+    &__icon
+        margin: calc(0.25rem + 1vw) 0
+        color: $white
+        width: calc(0.5rem + 2vw)
+        height: calc(0.5rem + 2vw)
+        border-radius: 50%
+        border: 2px solid $white
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: calc(0.25rem + 2vw)
+        line-height: calc(0.5rem + 2.25vw)
+        // background: url('../') center / contain no-repeat
+
+.align-left
+    align-items: flex-end
+    text-align: right
+
+@media screen and ( max-width: 1224px)
+    .object
+        width: 92.5%
+
+@media screen and ( max-width: 1024px)
+    .object
+        &__blockquote
+            bottom: 7.5%
+            font-size: calc(0.5rem + 0.75vw)

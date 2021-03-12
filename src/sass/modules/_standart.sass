@@ -11,6 +11,7 @@ body
   overflow-x: hiddenbody
   color: $black
   font-family: "Montserrat"
+  font-size: calc(0.25rem + 0.75vw)
 
 section
   width: 100%
@@ -27,6 +28,13 @@ a
 
 ul
   list-style: none
+
+.link
+  align-items: center
+
+  &:hover
+    & .link__arrow
+      transform: translateX(100%) scaleX(2)
 
 .container
   display: flex
@@ -48,7 +56,7 @@ ul
 .breadcrumbs
   display: flex
   margin: 2.5% 0
-  font-size: 1.25vw
+  font-size: calc(0.25rem + 1vw)
 
   &__link .bold
     color: $sand-olive

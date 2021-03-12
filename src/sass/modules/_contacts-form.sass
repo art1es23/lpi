@@ -1,0 +1,47 @@
+@import "../helpers/var"
+
+.contacts-form
+    display: flex
+    width: 50vw
+    flex-direction: column
+    margin: -7.5vw 12.5vw 0 auto
+    padding: 2.5%
+    background-color: $white
+    justify-content: space-between
+
+    &__title
+        display: flex
+        font-weight: 500
+        font-size: calc(0.25rem + 1.2vw)
+        text-align: center
+        line-height: calc(0.5rem + 1.5vw)
+        padding-bottom: 1.5rem
+
+    &__input
+        margin: calc(0.5rem + 0.25vw) 0
+        padding: calc(0.5rem + 0.5vw)
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
+
+    &__textarea
+        margin: calc(0.5rem + 0.25vw) 0
+        padding: calc(0.5rem + 0.5vw)
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
+
+    &__btn
+        display: flex
+        margin: calc(0.5rem + 0.5vw) 0
+        padding: calc(0.5rem + 0.5vw)
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
+        justify-content: center
+        align-items: center
+        text-align: center
+        border: none
+        color: $white
+
+.submit
+    background-color: $light-blue
+.close
+    background-color: $red

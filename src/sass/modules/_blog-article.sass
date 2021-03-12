@@ -5,14 +5,15 @@
     display: flex
 
     &--wrapper
-        width: 70%
+        width: 75%
         margin: 0 auto
         display: flex
         flex-direction: column
         padding: 5% 0
 
     &__title
-        font-size: 2.5rem
+        font-size: calc(0.25rem + 2.5vw)
+        line-height: calc(0.5rem + 2.5vw)
 
 .articles-group
     display: flex
@@ -33,9 +34,16 @@
     &__icon
         background: $light-blue url('../img/5.png') center / cover no-repeat
         width: 15%
-        height: 5rem
+        height: calc(0.5rem + 5vw)
         display: inline-block
 
     &__legend
         display: flex
+        font-size: calc(0.25rem + 0.7vw)
         align-items: center
+        line-height: calc(0.5rem + 1.25vw)
+
+@media screen and ( max-width: 1224px)
+    .blog-articles
+        &--wrapper
+            width: 85%

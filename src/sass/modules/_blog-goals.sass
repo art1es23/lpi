@@ -5,7 +5,7 @@
     display: flex
 
 .goals-group
-    width: 70%
+    width: 75%
     margin: 0 auto
     display: flex
     padding: 5% 0
@@ -14,22 +14,32 @@
         display: flex
         flex-direction: column
         width: 100%
-        justify-content: space-between
+        justify-content: flex-start
         align-items: center
         text-align: center
+        &:nth-child(even)
+            margin: 0 calc(0.5rem + 5vw)
 
 .goals-description
     &__icon
-        height: 1.5rem
-        width: 1.5rem
+        height: calc(0.5rem + 1.25vw)
+        width: calc(0.5rem + 1.25vw)
         background: url('../img/goals__icon1.png') center / cover no-repeat
 
     &__number
-        font-size: 2rem
+        font-size: calc(0.25rem + 1.75vw)
         font-weight: 700
-        padding: 1rem 0
+        padding: calc(0.5rem + 0.75vw) 0
         color: $blue
+        line-height: calc(0.5rem + 2vw)
 
     &__legend
+        font-size: calc(0.25rem + 0.7vw)
+        line-height: calc(0.5rem + 1.25vw)
         color: $blue
         font-weight: 500
+
+@media screen and ( max-width: 1224px)
+    .blog-goals
+        &--wrapper
+            width: 85%

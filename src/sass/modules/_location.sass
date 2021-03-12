@@ -17,8 +17,9 @@
 
         .footer-description__title
             color: $black
-            margin: 5rem 0 0
-            font-size: 1.35rem
+            margin: calc(0.25rem + 3.5vw) 0 0
+            font-size: calc(0.25rem + 1vw)
+            line-height: calc(0.5rem + 1.25vw)
 
         .footer-address__item
             color: $black
@@ -29,13 +30,21 @@
                 color: $black
 
     &--wrapper
-        width: 70%
+        width: 75%
         display: flex
         flex-direction: column
-        margin: 0 auto 0 15%
+        margin: 0 auto
+        // margin: 0 auto 0 15%
+
+    &--margin
+        margin: 0 auto 0 12.5%
+
+        & .footer-description
+            width: 70%
 
     &__title
-        font-size: 2.75rem
+        font-size: calc(0.25rem + 2.25vw)
+        line-height: calc(0.5rem + 2.25vw)
         width: 100%
         display: flex
         text-align: left
@@ -44,9 +53,9 @@
         margin: 1rem 0
         &-item
             text-decoration: underline
-            line-height: 1.25rem
-            font-size: 1rem
-            padding: 0.5rem 0
+            line-height: calc(0.5rem + 1.25vw)
+            font-size: calc(0.25rem + 0.75vw)
+            padding: calc(0.5rem + 0.5vw) 0
             color: $white
 
             &:hover
@@ -55,13 +64,13 @@
 .footer-description
     display: flex
     flex-direction: column
-    width: 50%
+    width: 40%
 
     &__title
         display: flex
         width: 100%
-        font-size: 1.25rem
-        line-height: 1.75rem
+        font-size: calc(0.25rem + 1vw)
+        line-height: calc(0.5rem + 1.5vw)
         font-weight: 600
         text-transform: uppercase
         color: $white
@@ -69,19 +78,19 @@
 .footer-address
     display: flex
     flex-direction: column
-    width: 100%
-    margin: 2rem 0
+    // width: 100%
+    margin: calc(0.5rem + 1.75vw) 0
 
     &__item
         display: inline-block
-        font-size: 1rem
-        line-height: 1.25rem
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
         color: $white
 
 .footer-contacts
     display: flex
     flex-direction: column
-    width: 100%
+    // width: 100%
 
     &__item
         display: flex
@@ -90,11 +99,20 @@
 
 .contacts-link
     &__caption
-        font-size: 1rem
-        line-height: 1.5rem
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
         color: $white
 
     &__item
-        font-size: 1rem
-        line-height: 1.5rem
+        font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
         color: $white
+
+@media screen and ( max-width: 1224px)
+    .location
+        &--wrapper
+            width: 85%
+        &--margin
+            width: 50%
+            & .footer-description
+                width: 100%

@@ -7,12 +7,13 @@
     &--wrapper
         display: flex
         flex-direction: column
-        width: 70%
+        width: 75%
         margin: 0 auto
         padding: 2.5% 0
 
     &__title
-        font-size: 2.5rem
+        font-size: calc(0.25rem + 2.5vw)
+        line-height: calc(0.5rem + 2.5vw)
         padding: 5% 0
         display: flex
         justify-content: center
@@ -67,7 +68,8 @@
         top: 0
         left: 0
         color: $light-blue
-        font-size: 5rem
+        font-size: calc(0.25rem + 5vw)
+        line-height: calc(0.5rem + 5vw)
         font-weight: 700
         transform: translate(30%, -50%)
 
@@ -75,7 +77,7 @@
         display: flex
         flex-direction: column
         height: 100%
-        padding: 0 2.5%
+        padding: 0 5%
         justify-content: space-evenly
         width: 100%
         text-align: left
@@ -86,11 +88,12 @@
         right: 0
         transform: translate(-25%, 40%)
         display: flex
-        font-size: 6rem
+        font-size: calc(0.25rem + 6vw)
+        line-height: calc(0.5rem + 6vw)
         color: #4c66a6
         font-weight: bold
-        height: 7.5rem
-        width: 7.5rem
+        height: calc(2.5rem + 5vw)
+        width: calc(2.5rem + 5vw)
         transition: all 1s ease-in-out
         animation: reverseTranslateRight 1s ease-in-out forwards
 
@@ -100,8 +103,8 @@
 
     &__icon
         margin: 5% auto
-        height: 10rem
-        width: 6.5rem
+        height: calc(1.5rem + 5vw)
+        width: calc(1.5rem + 5vw)
         background-repeat: no-repeat
         background-size: contain
         background-position: center
@@ -118,25 +121,26 @@
             background-image: url("../img/logo5.png")
 
     &__title
-        font-size: 1.35rem
-        font-weight: 500
-        line-height: 1.5rem
+        font-size: calc(0.25rem + 1vw)
+        font-weight: 600
+        line-height: calc(0.5rem + 1.5vw)
 
     &__legend
         text-align: justify
-        font-size: 1rem
+        font-size: calc(0.25rem + 0.8vw)
         text-transform: none
-        margin: 1.5rem auto
-        line-height: 1.35rem
+        margin: calc(0.5rem + 1.25vw) auto
+        line-height: calc(0.5rem + 1.25vw)
 
     &__link
-        padding: 1rem
+        padding: calc(0.5rem + 0.5vw)
         color: $blue
         transform: scale(0)
         text-decoration: none
-        width: 100%
+        width: 50%
         text-align: center
-        font-size: 1rem
+        font-size: calc(0.25rem + 0.6vw)
+        line-height: calc(0.5rem + 0.75vw)
         border: 1px solid #6993fe
 
     &:hover
@@ -168,7 +172,7 @@
     width: 100%
     justify-content: flex-end
     &-item
-        font-size: 1rem
+        font-size: calc(0.25rem + 0.75vw)
         display: inline-block
 
 @keyframes arrowTranslateRight
@@ -198,3 +202,8 @@
 
     to
         transform: translate(0, 40%)
+
+@media screen and ( max-width: 1224px)
+    .services
+        &--wrapper
+            width: 85%

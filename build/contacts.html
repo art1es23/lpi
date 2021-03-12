@@ -52,7 +52,7 @@
         </section>
 
         <section class="location">
-            <div class="location--wrapper">
+            <div class="location--wrapper location--margin">
                 <div class="location__footer footer-description">
                     <h3 class="footer-description__title">Приватне акціонерне товариство "Львівський проектний інститут"</h3>
                     
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="location__link">
-                    <a href="" class="location__link-item">Написать нам</a>
+                    <a href="" class="location__link-item" data-open-modal>Написать нам</a>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                 <textarea class="contacts-form__textarea" name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
                 <!-- <label for="content-comment"></label> -->
                 <textarea class="contacts-form__textarea" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
-                <button type="submit" class="contacts-form__submit">Відправити</button>
+                <button type="submit" class="contacts-form__btn submit">Відправити</button>
             </form>
     
         </section>
@@ -113,6 +113,23 @@
     <footer id="footer" class="footer">
             <p class="copyright">&copy; qmpwwsd</p>
     </footer>
+
+    <div class="modal-form" data-modal>
+        <form action="" method="post" role="form" class="modal-form-contacts contacts-form" id="contacts-form">
+            <h1 class="contacts-form__title">Залиште свої дані, задля отримання детальної інформації</h1>
+
+            <input class="contacts-form__input" type="text" id="name" placeholder="Імʼя" name="name" required>
+            <input class="contacts-form__input" type="text" id="email" placeholder="Еmail" name="email" required>
+            <input class="contacts-form__input" type="text" id="phone" placeholder="Телефон" name="phone" required>
+
+            <!-- <label for="content-topic"></label> -->
+            <textarea class="contacts-form__textarea" name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
+            <!-- <label for="content-comment"></label> -->
+            <textarea class="contacts-form__textarea" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
+            <button type="submit" class="contacts-form__btn submit">Відправити</button>
+            <button type="reset" class="contacts-form__btn close" data-close-modal>Close</button>
+        </form>
+    </div>
 
     <script src="./js/main.js"></script>
 

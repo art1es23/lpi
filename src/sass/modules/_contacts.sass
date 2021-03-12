@@ -12,8 +12,9 @@
 
   &__title
     display: flex
-    padding: 2.5% 15%
-    font-size: 2.5rem
+    padding: calc(2% + 1.5vw) 12.5%
+    font-size: calc(0.25rem + 2.5vw)
+    line-height: calc(0.5rem + 2.5vw)
 
 .map
   &--wrapper
@@ -23,6 +24,19 @@
     iframe
       width: 100%
 
+@media screen and ( max-width: 1366px)
+  .contacts
+    padding: 10% 0 0
+
+@media screen and ( max-width: 1224px)
+  .contacts
+    padding: 12.5% 0 0
+    &__title
+      padding: calc(2% + 2.5vw) 7.5%
+
+@media screen and ( max-width: 1024px)
+  .contacts
+    padding: 10% 0 0
 // @media screen and (max-width: 1366px)
 //   .contacts
 //     &--wrapper

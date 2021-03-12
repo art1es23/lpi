@@ -1,5 +1,104 @@
 @import "../helpers/var"
 
 .main-header
-    min-height: 100vh
-    background-color: $blue
+    height: 100vh
+    display: flex
+    min-width: 0
+    position: relative
+
+    &--wrapper
+        display: flex
+        width: 100%
+        justify-content: space-between
+        min-width: 0
+
+    &-description
+        min-width: 0
+        display: flex
+        flex-direction: column
+        width: 20%
+        margin: 17.5% 10%
+        justify-content: space-between
+
+        &__title
+            display: flex
+            width: 100%
+            font-size: calc(0.5rem + 2vw)
+            line-height: calc(0.5rem + 2.25vw)
+
+        &__legend
+            display: inline-block
+            width: 100%
+            text-align: right
+            margin: calc(0.5rem + 2vw) 0
+            font-size: calc(0.25rem + 0.75vw)
+            line-height: calc(0.5rem + 1vw)
+
+        &__link
+            display: flex
+            width: 75%
+            padding: calc(0.5rem + 0.75vw) 0
+            line-height: calc(0.5rem + 1vw)
+            font-size: calc(0.25rem + 0.75vw)
+
+    &-img
+        display: flex
+        min-width: 0
+        width: 60%
+        height: 90vh
+        overflow: hidden
+        &:hover
+            img
+                scale: 0.95
+
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            transition: all 0.3s ease-in-out
+
+.link__arrow
+    transition: all 1s ease
+    display: inline-block
+    width: 1.5rem
+    margin-left: calc(0.5rem + 0.5vw)
+    // content: '\27F6'
+
+@media screen and ( max-width: 768px )
+    .main-header
+        height: 75%
+
+        &--wrapper
+            justify-content: flex-start
+            align-items: center
+            flex-direction: column-reverse
+        &-description
+            width: 50%
+            margin: 5% auto 5%
+            justify-content: center
+            align-items: center
+
+            &__title
+                text-align: center
+                justify-content: center
+                font-size: calc(1rem + 2vw)
+                line-height: calc(1.25rem + 2.25vw)
+
+            &__legend
+                text-align: center
+                font-size: calc(0.5rem + 0.75vw)
+                line-height: calc(0.75rem + 1vw)
+
+            &__link
+                justify-content: center
+                line-height: calc(0.75rem + 1vw)
+                font-size: calc(0.5rem + 0.75vw)
+
+        &-img
+            margin-top: 12.5%
+            height: auto
+            width: 100%
+
+@media screen and ( max-width: 675px )
+    .main-header
+        height: 70vh

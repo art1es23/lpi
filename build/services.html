@@ -11,7 +11,7 @@
 
     <header id="header" class="header">
         <div class="logo">
-            <a href="#" class="logo__link">
+            <a href="./index.html" class="logo__link">
                 <img class="logo__icon" src="./img/logo.png" alt="Lviv Project University" height="80px" width="80px">
                 <span class="logo__caption">Львівський проектний інститут</span>
             </a>
@@ -21,7 +21,7 @@
 
         <nav class="navigation">
             <ul class="navigation--wrapper">
-                <li class="navigation__item"><a href="./services.html" class="navigation__link">Послуги</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Послуги</a></li>
                 <li class="navigation__item"><a href="./projects.html" class="navigation__link">Проекти</a></li>
                 <li class="navigation__item"><a href="./clients.html" class="navigation__link">Клієнти</a></li>
                 <li class="navigation__item"><a href="./company.html" class="navigation__link">Компанія</a></li>
@@ -40,14 +40,18 @@
 
     <main id="mainContent" class="main-content">
         <section class="main-header">
-            <div class="header__hero hero">
-                <div class="header__wrapper">
-                    <h1 class="header__title">Комплексне проектування</h1>
-                    <p class="header__description">Комплексне проектування - це виконання повного спектру проектних робіт для будівництва конкретного обʼєкта</p>
+            <div class="main-header--wrapper">
+                <div class="main-header-description">
+                    <h2 class="main-header-description__title title">Громадські будівлі</h2>
+                    <p class="main-header-description__legend">Проектування, реконструкція, будівництво заводів та фабрик, розробка документації, технічне переозброєння</p>
+                    <a href="" class="main-header-description__link link">
+                        <span class="link__caption">Дізнатись більше</span>
+                        <span class="link__arrow">&#10230;</span>
+                    </a>
                 </div>
-                <div class="hero--wrapper">
-                    <!-- <img class="hero__img" src="./img/storm.jpg" alt=""> -->
-                </div>
+                <div class="main-header-img">
+                    <img src="./img/1.jpg" alt="">
+                </div>    
             </div>
         </section>
         
@@ -83,7 +87,7 @@
                         <div class="services-description--wrapper">
                             <h3 class="services-description__title">Ескізний проект</h3>
                             <p class="services-description__legend">Ескізний проект (ЕП) - це сукупність документації, що визначає основні параметри об'єкта, який розробляється</p>
-                            <a href="./more__description.html" class="link services-description__link">Детальніше</a>
+                            <a href="./mtrueore__description.html" class="link services-description__link">Детальніше</a>
                         </div>
                         <span class="services-description__arrow">
                             <svg class="">
@@ -149,7 +153,6 @@
     
         <section class="location">
             <div class="location--wrapper">
-                <h2 class="location__title title">Локація</h2>
                 <div class="location__footer footer-description">
                     <h3 class="footer-description__title">Приватне акціонерне товариство "Львівський проектний інститут"</h3>
                     
@@ -183,7 +186,7 @@
                     </div>
                 </div>
                 <div class="location__link">
-                    <a href="" class="location__link-item">Написать нам</a>
+                    <a href="" class="location__link-item" data-open-modal>Написать нам</a>
                 </div>
             </div>
         </section>
@@ -193,6 +196,23 @@
     <footer id="footer" class="footer">        
         <p class="copyright">&copy; qmpwwsd</p>
     </footer>
+    
+    <div class="modal-form" data-modal>
+        <form action="" method="post" role="form" class="modal-form-contacts contacts-form" id="contacts-form">
+            <h1 class="contacts-form__title">Залиште свої дані, задля отримання детальної інформації</h1>
+
+            <input class="contacts-form__input" type="text" id="name" placeholder="Імʼя" name="name" required>
+            <input class="contacts-form__input" type="text" id="email" placeholder="Еmail" name="email" required>
+            <input class="contacts-form__input" type="text" id="phone" placeholder="Телефон" name="phone" required>
+
+            <!-- <label for="content-topic"></label> -->
+            <textarea class="contacts-form__textarea" name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
+            <!-- <label for="content-comment"></label> -->
+            <textarea class="contacts-form__textarea" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
+            <button type="submit" class="contacts-form__btn submit">Відправити</button>
+            <button type="reset" class="contacts-form__btn close" data-close-modal>Close</button>
+        </form>
+    </div>
 
     <!--    <svg class="">
         <use xlink:href="./img/svg/sprite.svg#009-flamingo"></use>
