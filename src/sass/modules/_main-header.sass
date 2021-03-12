@@ -66,7 +66,7 @@
 
 @media screen and ( max-width: 768px )
     .main-header
-        height: 75%
+        height: 70%
 
         &--wrapper
             justify-content: flex-start
@@ -101,4 +101,34 @@
 
 @media screen and ( max-width: 675px )
     .main-header
-        height: 70vh
+        &-description
+            width: 65%
+
+@media screen and ( max-width: 480px )
+    .main-header
+        height: 100vh
+
+        &-description
+            width: 85%
+            margin: 10% auto
+
+            &__title
+                text-align: center
+                justify-content: center
+                font-size: calc(1rem + 3.5vw)
+                line-height: calc(1.25rem + 3.5vw)
+
+            &__legend
+                text-align: center
+                font-size: calc(0.5rem + 1.75vw)
+                line-height: calc(0.75rem + 2vw)
+
+            &__link
+                justify-content: center
+                line-height: calc(0.75rem + 1vw)
+                font-size: calc(0.5rem + 0.75vw)
+
+        &-img
+            margin-top: 15%
+            height: 50vh
+            width: 100%

@@ -71,10 +71,15 @@
             width: 85%
 
 @media screen and ( max-width: 768px)
+    .stages
+        &__link
+            font-size: calc(0.5rem + 1vw)
+            line-height: calc(0.5rem + 1.25vw)
+
     .stages-group
         &__title
-            font-size: calc(0.25rem + 3vw)
-            line-height: calc(0.5rem + 3.5vw)
+            font-size: calc(0.25rem + 4vw)
+            line-height: calc(0.5rem + 4vw)
 
     .stages-description
         &__icon
@@ -82,11 +87,12 @@
             height: calc(1.25rem + 5vw)
 
         &__title
-            font-size: calc(0.5rem + 0.6vw)
+            font-size: calc(0.5rem + 0.75vw)
             line-height: calc(0.5rem + 1.75vw)
 
         &__legend
-            font-size: calc(0.5rem + 0.5vw)
+            text-align: justify
+            font-size: calc(0.5rem + 0.65vw)
             line-height: calc(0.5rem + 1.75vw)
 
 @media screen and ( max-width: 675px)
@@ -96,12 +102,14 @@
             line-height: calc(0.5rem + 2.5vw)
 
     .stages-group
+        justify-items: center
         grid-template-columns: repeat(1, 1fr)
         &__title
             font-size: calc(0.25rem + 5vw)
             line-height: calc(0.5rem + 5vw)
 
     .stages-description
+        width: 90%
         align-items: center
         &__icon
             width: calc(2rem + 5vw)
