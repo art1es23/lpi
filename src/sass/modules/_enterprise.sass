@@ -84,8 +84,8 @@
     &--after
         // position: absolute
         transition: all 0.3s ease-in-out
-        width: 90%
-        height: 90%
+        width: 100%
+        height: 100%
 
         img
             width: 100%
@@ -137,9 +137,9 @@
         margin-right: 0.5vw
     &__icon
         display: inline-block
-        width: 1.5rem
-        height: 1.5rem
-        background: center / cover no-repeat
+        width: calc(0.25rem + 1vw)
+        height: calc(0.25rem + 1vw)
+        background: center / contain no-repeat
 
         &1
             background-image: url('../img/Project_about_icon1.png')
@@ -166,7 +166,7 @@
 
 @media screen and ( max-width: 1024px)
     .enterprise-img
-        width: 45%
+        width: 40%
 
 @media screen and ( max-width: 768px)
     .enterprise-header
@@ -187,19 +187,20 @@
             align-items: center
 
     .enterprise-img
-        width: 75%
+        width: 60%
         justify-content: center
         align-items: center
         margin: 0 auto
 
     .enterprise-description
         width: 85%
-        padding: 5% 0
 
+        padding: 15% 0 5%
         &__title
             font-size: calc(0.5rem + 1.5vw)
             line-height: calc(0.5rem + 1.5vw)
             text-align: center
+            justify-content: center
 
         &__legend
             font-size: calc(0.5rem + 1vw)
@@ -214,6 +215,10 @@
         span
             margin-right: 0.5vw
 
+        &__icon
+            width: calc(1rem + 1.5vw)
+            height: calc(1rem + 1.5vw)
+
 @media screen and ( max-width: 700px)
     .enterprise-header
         &__logo
@@ -221,8 +226,8 @@
 
     .enterprise-description
         width: 95%
-        padding: 5% 0
 
+        // padding: 15% 0 5%
         &__legend
             padding: 1.5rem 0
         &__title
@@ -247,3 +252,6 @@
             .bold
                 font-size: calc(0.25rem + 5.5vw)
                 line-height: calc(0.25rem + 6vw)
+
+    .enterprise-img
+        width: 80%

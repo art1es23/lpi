@@ -23,14 +23,26 @@
         &__title
             display: flex
             width: 100%
+            padding-bottom: calc(0.25rem + 2vw)
+            margin-bottom: calc(0.25rem + 2vw)
             font-size: calc(0.5rem + 2vw)
             line-height: calc(0.5rem + 2.25vw)
+            position: relative
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                width: 50%
+                height: 5px
+                background-color: $blue
+                bottom: 0
+                left: 0
 
         &__legend
             display: inline-block
             width: 100%
             text-align: right
-            margin: calc(0.5rem + 2vw) 0
+            margin-bottom: calc(0.5rem + 2vw)
             font-size: calc(0.25rem + 0.75vw)
             line-height: calc(0.5rem + 1vw)
 
@@ -84,6 +96,11 @@
                 justify-content: center
                 font-size: calc(1rem + 2vw)
                 line-height: calc(1.25rem + 2.25vw)
+                &:after
+                    left: 50%
+                    height: 3px
+                    width: 25%
+                    transform: translateX(-50%)
 
             &__legend
                 text-align: center

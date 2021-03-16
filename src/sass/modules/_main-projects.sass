@@ -15,8 +15,8 @@
         padding: 5% 0 0
 
     &__title
-        font-size: calc(0.25rem + 2vw)
-        line-height: calc(0.5rem + 2.75vw)
+        font-size: $fons-size-title
+        line-height: $line-height-title
         width: 100%
         position: relative
         &::before
@@ -28,9 +28,9 @@
             height: 100%
             display: block
             content: "Проекти"
-            font-size: calc(5rem + 2.5vw)
-            line-height: calc(0.75rem + 2.75vw)
-            color: rgba(0,0,0,0.15)
+            font-size: $fons-size-title--before
+            // line-height: calc(0.75rem + 2.75vw)
+            color: $title-before
 
 .projects-box
     display: flex
@@ -61,7 +61,9 @@
                 text-align: right
 
         &:hover
+            // & .project-hero__img
             & img
+                box-shadow: 2.5px 2.5px 12.5px 0 $blue
                 transform: scale(1.05)
 .project
     &__item
@@ -75,19 +77,21 @@
     &__img
         // flex-basis: 25vh
         display: flex
+        transition: $transition
 
         background: $light-blue
         img
+            box-shadow: 5px 5px 25px 0 $blue
             width: 100%
             height: 100%
             object-fit: contain
-            transition: transform 0.3s ease-in-out
+            transition: all 0.3s ease-in-out
 
     &__caption
         position: absolute
         top: 5%
         left: 5%
-        color: $black
+        color: $blue
         padding: calc(0.5rem + 0.5vw) calc(0.5rem + 1vw)
         background-color: rgba($white, 0.35)
         border-radius: 5px
@@ -125,6 +129,10 @@
         &--wrapper
             width: 85%
 
+        &__title
+            &::before
+                transform: translate(-7.5%, 0)
+
 @media screen and ( max-width: 1024px)
     .main-projects
         &__title
@@ -134,8 +142,10 @@
 @media screen and ( max-width: 768px)
     .main-projects
         &__title
-            font-size: calc(0.5rem + 4.5vw)
-            line-height: calc(0.5rem + 4.5vw)
+            font-size: calc(0.25rem + 4vw)
+            line-height: calc(0.5rem + 4vw)
+            &::before
+                font-size: calc(2.5rem + 2.5vw)
 
     .project
         &-description
@@ -206,10 +216,10 @@
 
     .main-projects
         &--padding
-            padding: 12.5% 0 0
+            padding: 20% 0 0
         &__title
-            font-size: calc(1rem + 5vw)
-            line-height: calc(1rem + 5vw)
+            font-size: calc(0.25rem + 6vw)
+            line-height: calc(0.5rem + 6vw)
 
     .projects-box
         padding: 0

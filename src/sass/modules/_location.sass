@@ -8,26 +8,26 @@
     background: $blue url('../img/project__map.png') 90% center / 45% no-repeat
 
     &--main
-        color: $black
+        color: $blue
         padding: 3.5% 0
         background: $white url('../img/map.png') right center / 50% no-repeat
 
         .location__link-item
-            color: $black
+            color: $blue
 
         .footer-description__title
-            color: $black
+            color: $blue
             margin: calc(0.25rem + 3.5vw) 0 0
             font-size: calc(0.25rem + 1vw)
             line-height: calc(0.5rem + 1.25vw)
 
         .footer-address__item
-            color: $black
+            color: $blue
 
         .contacts-link
             &__caption,
             &__item
-                color: $black
+                color: $blue
 
     &--wrapper
         width: 75%
@@ -44,12 +44,12 @@
             width: 70%
 
         & .contacts-form
+            z-index: 10
             width: 50vw
 
     &__title
-        font-size: calc(0.25rem + 2vw)
-        line-height: calc(0.5rem + 2.75vw)
-
+        font-size: $fons-size-title
+        line-height: $line-height-title
         width: 100%
         display: flex
         text-align: left
@@ -63,9 +63,9 @@
             height: 100%
             display: block
             content: "Локація"
-            font-size: calc(5rem + 2.5vw)
-            line-height: calc(0.75rem + 2.75vw)
-            color: rgba(0,0,0,0.15)
+            font-size: $fons-size-title--before
+            // line-height: calc(0.75rem + 2.75vw)
+            color: $title-before
 
     &__link
         margin: 1rem 0
@@ -139,11 +139,17 @@
             & .contacts-form
                 width: 50vw
 
+        &__title
+            &::before
+                transform: translate(-7.5%, 0)
+
 @media screen and ( max-width: 768px)
     .location
         &__title
             font-size: calc(0.25rem + 4vw)
             line-height: calc(0.5rem + 4vw)
+            &::before
+                font-size: calc(2.5rem + 3.5vw)
 
         &--main
             .footer-description__title

@@ -15,8 +15,8 @@
         width: 100%
         justify-content: center
         align-items: center
-        font-size: calc(0.25rem + 2vw)
-        line-height: calc(0.5rem + 2.75vw)
+        font-size: $fons-size-title
+        line-height: $line-height-title
         position: relative
         &::before
             position: absolute
@@ -27,15 +27,15 @@
             height: 100%
             display: block
             content: "Об'єкти"
-            font-size: calc(5rem + 2.5vw)
-            line-height: calc(0.75rem + 2.75vw)
-            color: rgba(0,0,0,0.15)
+            font-size: $fons-size-title--before
+            // line-height: $line-height-title--before
+            color: $title-before
 
     &__blockquote
         bottom: 7.5%
         left: 55%
         position: absolute
-        border-left: 5px solid rgba($black, 0.35)
+        border-left: 5px solid rgba($blue, 0.35)
         padding: calc(0.25rem + 0.25vw) calc(0.5rem + 0.5vw)
         font-size: calc(0.25rem + 0.75vw)
         line-height: calc(0.5rem + 1.25vw)
@@ -48,6 +48,23 @@
     justify-content: space-between
     align-items: center
     margin: 0 0 15% 0
+    position: relative
+    &::before,
+    &::after
+        display: block
+        position: absolute
+
+    &::before
+        content: url('../img/pattern-2.png')
+        top: 50%
+        left: 0
+        transform: translate(-50%, 0%)
+
+    &::after
+        content: url('../img/pattern-3.png')
+        bottom: 0
+        right: 0
+        transform: translate(0, 50%)
 
     &__item
         display: flex
@@ -55,6 +72,7 @@
         align-items: center
         position: relative
         transition: all 0.3s ease-in-out
+        z-index: 5
         &:hover
             cursor: pointer
 
@@ -118,6 +136,10 @@
     .object
         width: 92.5%
 
+        &__title
+            &::before
+                transform: translate(-7.5%, 0)
+
 @media screen and ( max-width: 1024px)
     .object
         &__blockquote
@@ -129,6 +151,14 @@
         &__title
             font-size: calc(0.25rem + 4vw)
             line-height: calc(0.5rem + 4vw)
+            &::before
+                font-size: calc(2.5rem + 3.5vw)
+
+    .object-box
+        &::before,
+        &::after
+            display: none
+
 @media screen and ( max-width: 700px)
 
     .object

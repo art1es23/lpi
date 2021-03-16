@@ -3,6 +3,7 @@
 .services
     width: 100%
     display: flex
+    background: url('../img/services__background.png') center / contain no-repeat
 
     &--wrapper
         display: flex
@@ -19,6 +20,19 @@
         justify-content: center
         align-items: center
         text-align: center
+        position: relative
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            transform: translate(0, -25%)
+            width: 100%
+            height: 100%
+            display: block
+            content: "Стадії проектування"
+            font-size: $fons-size-title--before
+            line-height: $line-height-title--before
+            color: $title-before
 
     &__link
         line-height: calc(0.5rem + 1.25vw)
@@ -197,6 +211,11 @@
         transform: translate(0, 40%)
 
 @media screen and ( max-width: 1366px)
+    .services
+        &__title
+            &::before
+                font-size: calc(1.25rem + 5vw)
+                line-height: calc(1.5rem + 5vw)
 
     .services-box-group
         grid-gap: 7.5vw
@@ -214,6 +233,10 @@
         &__title
             font-size: calc(0.5rem + 4vw)
             line-height: calc(0.5rem + 4vw)
+
+            &::before
+                font-size: calc(1rem + 6.5vw)
+                line-height: calc(1.25rem + 6.5vw)
 
     .services-box-group
         grid-template-columns: repeat(1, 1fr)
@@ -244,5 +267,11 @@
             transform: scale(1)
 
 @media screen and ( max-width: 480px)
+    .services
+        &__title
+            &::before
+                font-size: calc(1rem + 5vw)
+                line-height: calc(1.25rem + 5vw)
+
     .services-box-group
         width: 100%
