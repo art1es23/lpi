@@ -18,6 +18,7 @@ section
 
 h1, h2, h3, h4
   color: $blue
+  transition: all 0.3s ease-in-out
 
 a
   text-decoration: none
@@ -25,6 +26,8 @@ a
   transition: all 0.3s ease-in-out
   &:hover
     color: $light-blue
+    & h3
+      color: $light-blue
 
 ul
   list-style: none

@@ -20,7 +20,7 @@
 .blog-description
     flex-direction: column
     justify-content: space-evenly
-    padding: 15% 10% 0 0
+    padding: 0 10% 15% 0
     &__title
         font-size: $fons-size-title
         width: 100%
@@ -100,6 +100,8 @@
     .blog
         padding: 10% 0 0
     .blog-description
+        padding: 0
+
         &__title
             margin: 5% 0
             font-size: calc(0.25rem + 4vw)
@@ -117,10 +119,12 @@
         &__link
             width: 100%
             font-size: calc(.25rem + 1.5vw)
+    .blog-img
+        width: 80%
 
 @media screen and ( max-width: 700px)
     .blog
-        // padding: 10% 0 0
+        padding: 15% 0 0
         &--wrapper
             grid-template-columns: repeat(1, 1fr)
     .blog-description
@@ -139,9 +143,12 @@
             width: 35%
     .blog-img
         width: 60%
+        margin: 2.5% auto
         justify-self: center
 
 @media screen and ( max-width: 480px)
+    .blog
+        padding: 20% 0 0 0
     .blog-description
         &__title
             font-size: calc(0.25rem + 6vw)
