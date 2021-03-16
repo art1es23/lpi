@@ -34,11 +34,11 @@
     &:active
       color: $light-blue
 
-.menu
+.menu-toggle
   display: none
   position: relative
-  width: 30px
-  height: 25px
+  width: 2rem
+  height: 2rem
   margin: auto
 
   &:hover
@@ -68,8 +68,11 @@
     &:after
       margin-top: 12px
 
-  &--toggle
-    margin: 2.5% auto
+  &--active
+    position: absolute
+    top: 2.5%
+    right: 2.5%
+    transform: translate(-50%, 50%)
     span
       transition-duration: 0s
       background-color: rgba($black, 0)
@@ -88,11 +91,39 @@
       &:after
         transform: rotate(-45deg)
 
+@media screen and ( max-width: 1024px)
+  .menu-toggle
+    display: flex
+    margin: 0
+
+  .navigation
+    display: none
+
+    &--active
+      display: flex
+      padding: 7.5% 0
+      & .navigation--wrapper
+        flex-direction: column
+
+    &__link
+      padding: 1.75rem 0
+      font-size: calc(0.5rem + 2vw)
+
+@media screen and (max-device-width: 767px) and (min-device-width: 320px) and (orientation: landscape)
+  .navigation
+    &--active
+      padding: 2.5% 0
+      & .navigation--wrapper
+
+    &__link
+      padding: 0.5rem 0
+      font-size: calc(0.5rem + 2vw)
+
 // @media screen and (max-width: 1366px)
 //   .navigation__link
 //     font-size: 1.2rem
 
-// @media screen and (max-width: 1224px)
+// @media screen and (max-width: 1280px)
 //   .menu
 //     display: flex
 //   .navigation

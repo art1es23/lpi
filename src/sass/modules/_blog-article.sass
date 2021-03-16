@@ -26,24 +26,71 @@
     &__item
         display: flex
         width: 50%
-        padding: 1.5% 5% 1.5% 0
+        padding: 1.5% 2.5% 1.5% 0
         margin: 0 auto
-        justify-content: space-between
 
 .article
     &__icon
         background: $light-blue url('../img/5.png') center / cover no-repeat
-        width: 15%
+        width: calc(0.5rem + 5vw)
         height: calc(0.5rem + 5vw)
         display: inline-block
+        margin-right: 1rem
 
     &__legend
         display: flex
-        font-size: calc(0.25rem + 0.7vw)
+        text-align: justify
         align-items: center
+        font-size: calc(0.25rem + 0.7vw)
         line-height: calc(0.5rem + 1.25vw)
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
     .blog-articles
         &--wrapper
             width: 85%
+
+@media screen and ( max-width: 768px)
+
+    .blog-articles
+        &__title
+            font-size: calc(0.5rem + 3.5vw)
+            line-height: calc(0.5rem + 3.5vw)
+
+    .article
+        &__legend
+            font-size: calc(0.25rem + 1.1vw)
+            line-height: calc(0.5rem + 1.25vw)
+
+@media screen and ( max-width: 700px)
+    .articles-group
+        &__item
+            width: 100%
+            justify-content: flex-start
+            padding: 2.5% 2.5% 2.5% 0
+
+    .article
+        &__icon
+            width: calc(1rem + 5vw)
+            height: calc(1rem + 5vw)
+        &__legend
+            font-size: calc(0.25rem + 1.75vw)
+            line-height: calc(0.5rem + 1.5vw)
+
+@media screen and ( max-width: 480px)
+    .blog-articles
+        &__title
+            font-size: calc(0.5rem + 7.5vw)
+            line-height: calc(0.5rem + 7.5vw)
+            padding: 2.5% 0
+
+    .articles-group
+        &__item
+            padding: 2.5% 2.5% 2.5% 0
+
+    .article
+        &__icon
+            width: calc(1.5rem + 15vw)
+            height: calc(1.5rem + 15vw)
+        &__legend
+            font-size: calc(0.5rem + 1.75vw)
+            line-height: calc(0.5rem + 1.5vw)

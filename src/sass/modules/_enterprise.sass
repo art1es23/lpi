@@ -3,7 +3,7 @@
 .enterprise-header
     width: 100%
     display: flex
-    background: rgba(0,0,0,0.25) url('../img/1.jpg') center / cover no-repeat
+    background: url('../img/1.jpg') center / cover no-repeat
 
     &--wrapper
         margin: 0 auto
@@ -18,6 +18,7 @@
         justify-content: center
         align-items: center
         margin: 15% auto 2.5%
+        overflow: hidden
 
         img
             height: 100%
@@ -49,7 +50,8 @@
 
         &:hover
             & .enterprise-img--after
-                background-size: 105%
+                transform: translate(10%, 10%) scale(0.95)
+                // background-size: 105% 105%
 
     &__item
         display: flex
@@ -57,20 +59,20 @@
 
 .enterprise-img
     position: relative
-    width: 35%
+    width: 32.5%
+    display: flex
     margin: 0 auto 0 0
 
-    &--before,
-    &--after
         // position: absolute
-        width: 90%
-        height: 90%
-        display: inline-block
-        background: rgba(0,0,0,0.25) url('../img/5.png') center / 100% no-repeat
+        // width: 90%
+        // height: 90%
+        // display: inline-block
+        // background: url('../img/5.png') center / cover no-repeat
 
     &--before
         position: relative
         &::before
+            position: absolute
             top: 0
             left: 0
             display: block
@@ -78,18 +80,30 @@
             width: 100%
             height: 100%
             background-color: rgba(0,0,0,0.5)
+    &--before,
+    &--after
+        // position: absolute
+        transition: all 0.3s ease-in-out
+        width: 90%
+        height: 90%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
 
     &--after
         position: absolute
-        top: 10%
-        left: 10%
-        transition: all 0.3s ease-in-out
+        top: 0
+        left: 0
+        transform: translate(10%, 10%)
 
 .enterprise-description
     width: 50%
 
     &__title
         font-size: calc(0.25rem + 1.25vw)
+        line-height: calc(0.5rem + 1.25vw)
         font-weight: 600
         display: flex
         width: 100%
@@ -100,6 +114,7 @@
         display: inline-block
         padding: 2.5rem 0
         font-size: calc(0.25rem + 0.75vw)
+        line-height: calc(0.5rem + 1.25vw)
         text-align: justify
         line-height: 1.5rem
 
@@ -113,6 +128,7 @@
     &__item
         margin: 0.5rem 0
         font-size: calc(0.25rem + 0.6vw)
+        line-height: calc(0.25rem + 0.6vw)
         display: flex
         align-items: center
 
@@ -123,7 +139,7 @@
         display: inline-block
         width: 1.5rem
         height: 1.5rem
-        background: url('../img/Project_about_icon1.png') center / cover no-repeat
+        background: center / cover no-repeat
 
         &1
             background-image: url('../img/Project_about_icon1.png')
@@ -135,3 +151,99 @@
             background-image: url('../img/Project_about_icon4.png')
         &5
             background-image: url('../img/Project_about_icon5.png')
+
+@media screen and ( max-width: 1500px)
+    .enterprise-img
+        // width: 35%
+
+@media screen and ( max-width: 1366px)
+    .enterprise-img
+        width: 40%
+@media screen and ( max-width: 1280px)
+    .enterprise
+        &--wrapper
+            width: 85%
+
+@media screen and ( max-width: 1024px)
+    .enterprise-img
+        width: 45%
+
+@media screen and ( max-width: 768px)
+    .enterprise-header
+        &__logo
+            margin: 25% auto 0 auto
+
+        &__title
+            font-size: calc(0.5rem + 3vw)
+            line-height: calc(0.5rem + 5vw)
+
+            .bold
+                font-size: calc(0.25rem + 5.5vw)
+                line-height: calc(0.25rem + 6vw)
+
+    .enterprise
+        &--wrapper
+            flex-direction: column
+            align-items: center
+
+    .enterprise-img
+        width: 75%
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+
+    .enterprise-description
+        width: 85%
+        padding: 5% 0
+
+        &__title
+            font-size: calc(0.5rem + 1.5vw)
+            line-height: calc(0.5rem + 1.5vw)
+            text-align: center
+
+        &__legend
+            font-size: calc(0.5rem + 1vw)
+            line-height: calc(0.5rem + 2vw)
+
+    .advantage-list
+        &__item
+            font-size: calc(0.5rem + 0.75vw)
+            line-height: calc(0.5rem + 1.5vw)
+
+    .advantage
+        span
+            margin-right: 0.5vw
+
+@media screen and ( max-width: 700px)
+    .enterprise-header
+        &__logo
+            margin: 40% auto 0 auto
+
+    .enterprise-description
+        width: 95%
+        padding: 5% 0
+
+        &__legend
+            padding: 1.5rem 0
+        &__title
+            font-size: calc(0.5rem + 2.5vw)
+            line-height: calc(0.5rem + 2.5vw)
+
+    .advantage-list
+        &__item
+            font-size: calc(0.5rem + 0.5vw)
+            line-height: calc(0.5rem + 1.25vw)
+
+    .advantage
+        span
+            margin-right: 0.5vw
+
+@media screen and ( max-width: 480px)
+    .enterprise-header
+        &__title
+            font-size: calc(0.5rem + 2.5vw)
+            line-height: calc(0.5rem + 5vw)
+
+            .bold
+                font-size: calc(0.25rem + 5.5vw)
+                line-height: calc(0.25rem + 6vw)

@@ -116,12 +116,23 @@
     color: $black
     transition: color 0.3s ease-in-out
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
   .hero
     &--wrapper
       width: 85%
 
 @media screen and ( max-width: 768px)
+  .hero
+    &--wrapper
+      padding-top: 0
+
+  .hero-link
+    &__caption
+      line-height: calc(0.75rem + 2.25vw)
+      font-size: calc(0.75rem + 2vw)
+    &__icon
+      font-size: calc(0.75rem + 2vw)
+
   .about
     padding: 0 5% 0 0
     &__title,
@@ -141,12 +152,32 @@
     &--wrapper
       flex-direction: column
       align-items: center
-      padding-top: 0
 
   .about
     padding: 5% 0
     width: 80%
 
     &__link
+      justify-content: center
       align-self: center
       text-align: center
+
+@media screen and ( max-width: 480px)
+  .hero-link
+    width: 80%
+
+  .about
+    width: 90%
+    &__title,
+    &__description
+      line-height: calc(1rem + 1.75vw)
+
+    &__title
+      font-size: calc(0.5rem + 1.75vw)
+    &__description
+      font-size: calc(0.5rem + 1.5vw)
+    &__link
+      font-size: calc(0.5rem + 1.75vw)
+      line-height: calc(1rem + 2vw)
+      width: 100%
+      margin: calc(0.5rem + 1.75vw) 0

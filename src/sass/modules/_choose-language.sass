@@ -4,12 +4,14 @@
   display: flex
   justify-content: space-evenly
   align-items: center
-  width: 7.5%
-  margin: 0 auto
-
+  // justify-self: flex-end
+  // width: 7.5%
+  // margin: 0 auto
+  margin-right: 1.5rem
   &__item
     display: flex
     font-size: calc(0.25rem + 0.75vw)
+    line-height: calc(0.25rem + 1vw)
     border: none
     text-align: center
     justify-content: center
@@ -28,10 +30,15 @@
         left: 1px solid $blue
         right: 1px solid $blue
 
+@media screen and ( max-width: 1024px)
+  .chooseLanguage
+    &__item
+      font-size: calc(0.5rem + 1vw)
+      line-height: calc(0.5rem + 1vw)
 // @media screen and (max-width: 1366px)
 //   .chooseLanguage
 //     width: 10%
-// @media screen and (max-width: 1224px)
+// @media screen and (max-width: 1280px)
 //   .chooseLanguage
 //     width: 12.5%
 // @media screen and (max-width: 1024px)

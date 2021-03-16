@@ -11,13 +11,11 @@
 
     <header id="header" class="header">
         <div class="logo">
-            <a href="#" class="logo__link">
+            <a href="./index.html" class="logo__link">
                 <img class="logo__icon" src="./img/logo.png" alt="Lviv Project University" height="80px" width="80px">
                 <span class="logo__caption">Львівський проектний інститут</span>
             </a>
         </div>
-
-        <a class="menu"><span></span></a>
 
         <nav class="navigation">
             <ul class="navigation--wrapper">
@@ -36,7 +34,10 @@
             <button class="chooseLanguage__item">EN</button>
         </div>
 
+        <a class="menu-toggle"><span></span></a>
+
     </header>
+
 
     <main id="mainContent" class="main-content">
 
@@ -315,7 +316,7 @@
             <!-- <label for="content-topic"></label> -->
             <textarea class="contacts-form__textarea" name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
             <!-- <label for="content-comment"></label> -->
-            <textarea class="contacts-form__textarea" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
+            <textarea class="contacts-form__textarea input-comment" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
             <button type="submit" class="contacts-form__btn submit">Відправити</button>
             <button type="reset" class="contacts-form__btn close" data-close-modal>Close</button>
         </form>

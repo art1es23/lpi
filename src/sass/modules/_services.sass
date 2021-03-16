@@ -9,7 +9,7 @@
         flex-direction: column
         width: 75%
         margin: 0 auto
-        padding: 2.5% 0
+        padding: 0 0 5%
 
     &__title
         font-size: calc(0.25rem + 2.5vw)
@@ -20,40 +20,33 @@
         align-items: center
         text-align: center
 
+    &__link
+        line-height: calc(0.5rem + 1.25vw)
+        font-size: calc(0.25rem + 0.8vw)
+
 .services-box-group
     background-position: 10% center
     background-size: cover
     background-repeat: no-repeat
     padding: 5% 0
-
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 10vw
 
     &__item
         display: flex
-        width: 45%
-        margin: auto
         align-items: center
         justify-content: flex-end
         text-align: center
-        padding: 5% 2.5%
+        padding: 7.5% 2.5%
         transition: all 0.3s ease
         text-transform: uppercase
         position: relative
         background-color: #def1fc
         box-shadow: 15px 15px 25px 0 rgba(0,0,0,0.25)
-        &:nth-child(n)
-            margin: -5rem auto auto 0
 
-        &:nth-child(2n)
-            margin: 15rem 0 auto auto
-
-        &:first-child
-            margin-top: 0
-
-        &:last-child
-            margin: -5rem auto 0
-            transform: translateX(-62.5%)
+        &--right
+            transform: translateY(75%)
 
         &:hover
             background-color: rgba(222, 241, 252, 0.5)
@@ -121,16 +114,16 @@
             background-image: url("../img/logo5.png")
 
     &__title
-        font-size: calc(0.25rem + 1vw)
         font-weight: 600
         line-height: calc(0.5rem + 1.5vw)
+        font-size: calc(0.25rem + 1vw)
 
     &__legend
         text-align: justify
-        font-size: calc(0.25rem + 0.8vw)
         text-transform: none
         margin: calc(0.5rem + 1.25vw) auto
         line-height: calc(0.5rem + 1.25vw)
+        font-size: calc(0.25rem + 0.8vw)
 
     &__link
         padding: calc(0.5rem + 0.5vw)
@@ -203,7 +196,53 @@
     to
         transform: translate(0, 40%)
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1366px)
+
+    .services-box-group
+        grid-gap: 7.5vw
+
+@media screen and ( max-width: 1280px)
     .services
         &--wrapper
             width: 85%
+
+@media screen and ( max-width: 768px)
+    .services
+        &__link
+            line-height: calc(0.5rem + 2.25vw)
+            font-size: calc(0.25rem + 1.75vw)
+        &__title
+            font-size: calc(0.5rem + 4vw)
+            line-height: calc(0.5rem + 4vw)
+
+    .services-box-group
+        grid-template-columns: repeat(1, 1fr)
+        margin: 0 auto
+        width: 85%
+        grid-gap: 10vw 0
+
+        &__item
+            padding: 10% 5%
+
+            &--right
+                transform: translateY(0)
+
+    .services-description
+        &__number
+            font-size: calc(0.25rem + 8vw)
+            line-height: calc(0.5rem + 8vw)
+
+        &__title
+            line-height: calc(0.5rem + 2.25vw)
+            font-size: calc(0.25rem + 2vw)
+
+        &__legend,
+        &__link
+            // margin: calc(0.5rem + 1.25vw) auto
+            line-height: calc(0.5rem + 2.25vw)
+            font-size: calc(0.25rem + 1.75vw)
+            transform: scale(1)
+
+@media screen and ( max-width: 480px)
+    .services-box-group
+        width: 100%

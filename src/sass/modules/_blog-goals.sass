@@ -39,7 +39,49 @@
         color: $blue
         font-weight: 500
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
     .blog-goals
         &--wrapper
             width: 85%
+
+@media screen and ( max-width: 768px)
+
+    .goals-group
+        &__item
+            margin: 0 auto
+
+    .goals-description
+        &__icon
+            height: calc(0.5rem + 2.5vw)
+            width: calc(0.5rem + 2.5vw)
+
+        &__number
+            font-size: calc(0.25rem + 3vw)
+            line-height: calc(0.5rem + 3vw)
+
+        &__legend
+            font-size: calc(0.5rem + 0.7vw)
+            line-height: calc(0.5rem + 1.25vw)
+
+@media screen and ( max-width: 768px)
+
+    .goals-group
+        margin: 7.5% auto
+        &__item
+            margin: 0 auto
+
+            &:nth-child(even)
+                margin: 0 auto
+
+    .goals-description
+        &__icon
+            height: calc(0.5rem + 3.5vw)
+            width: calc(0.5rem + 3.5vw)
+
+        &__number
+            font-size: calc(0.5rem + 4vw)
+            line-height: calc(0.5rem + 4vw)
+
+        &__legend
+            font-size: calc(0.5rem + 1vw)
+            line-height: calc(0.5rem + 1.25vw)

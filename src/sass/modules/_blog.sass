@@ -3,13 +3,15 @@
 .blog
     display: flex
     width: 100%
-    padding: 10% 0 0
+    padding: 10vh 0 0
 
     &--wrapper
         display: grid
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: auto minmax(40vw, 35vw)
         width: 75%
         margin: 0 auto
+        align-items: center
+        justify-items: flex-end
 
     &__item
         display: flex
@@ -23,7 +25,7 @@
         font-size: calc(0.25rem + 2.25vw)
         width: 100%
         display: inline-block
-        padding: 0 0 2.5%
+        // padding: 0 0 2.5%
         line-height: calc(0.5rem + 3vw)
 
     &__caption
@@ -55,12 +57,83 @@
 .blog-img
     text-align: right
     justify-content: center
+    width: 75%
 
     &__link
+        display: flex
         width: 100%
         height: 100%
+        overflow: hidden
 
-@media screen and ( max-width: 1224px)
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+@media screen and ( max-width: 1366px)
+    .blog-description
+        &__title
+            font-size: calc(.5rem + 3.25vw)
+
+@media screen and ( max-width: 1280px)
     .blog
         &--wrapper
             width: 85%
+
+@media screen and ( max-width: 768px)
+    .blog-description
+        &__title
+            font-size: calc(.25rem + 5.5vw)
+
+        &__caption
+            font-size: calc(.25rem + 2vw)
+
+        &__legend
+            font-size: calc(.25rem + 1.5vw)
+            line-height: calc(.5rem + 1.5vw)
+        &__link
+            width: 100%
+            font-size: calc(.25rem + 1.5vw)
+
+@media screen and ( max-width: 700px)
+    .blog
+        padding: 17.5% 0 0
+        &--wrapper
+            grid-template-columns: repeat(1, 1fr)
+    .blog-description
+        padding: 3.5vh 0
+        &__title
+            font-size: calc(.25rem + 5vw)
+
+        &__caption
+            font-size: calc(.25rem + 3vw)
+
+        &__legend
+            font-size: calc(.25rem + 1.5vw)
+            line-height: calc(.5rem + 2vw)
+        &__link
+            font-size: calc(.25rem + 1.5vw)
+            width: 35%
+    .blog-img
+        width: 60%
+        justify-self: center
+
+@media screen and ( max-width: 480px)
+    .blog-description
+        &__title
+            font-size: calc(.75rem + 7.5vw)
+            line-height: calc(.75rem + 7.5vw)
+
+        &__caption
+            font-size: calc(.5rem + 3.25vw)
+            line-height: calc(.5rem + 4vw)
+
+        &__legend
+            font-size: calc(.5rem + 2vw)
+            line-height: calc(.5rem + 3.5vw)
+        &__link
+            width: 100%
+            padding: 1rem
+            font-size: calc(.25rem + 2.5vw)
+
+    .blog-img
+        width: 100%

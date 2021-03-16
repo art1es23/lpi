@@ -1,4 +1,4 @@
-const navMenu = (headerSelector, navSelector, toggleMenuSelector, adaptiveClass, fixedClass) => {
+const navMenu = (headerSelector, navSelector, toggleMenuSelector, adaptiveClass, fixedClass, showMobileMenuClass) => {
 
     const header = document.querySelector(headerSelector),
         nav = document.querySelector(navSelector),
@@ -29,6 +29,24 @@ const navMenu = (headerSelector, navSelector, toggleMenuSelector, adaptiveClass,
         });
     }
 
+    function toggleMobileMenu() {
+        // console.log(toggleMenu);
+        toggleMenu.classList.remove('menu-toggle--active');
+        nav.classList.remove('navigation--active');
+        header.classList.remove('header--fullpage');
+        document.body.classList.remove('scroll--hidden');
+
+        toggleMenu.addEventListener('click', (e) => {
+            toggleMenu.classList.toggle('menu-toggle--active');
+            nav.classList.toggle('navigation--active');
+            header.classList.toggle('header--fullpage');
+            document.body.classList.toggle('scroll--hidden');
+        });
+
+
+    }
+
+    toggleMobileMenu();
     fixedMenu();
 
 }

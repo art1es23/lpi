@@ -13,8 +13,8 @@
   &__title
     display: flex
     padding: calc(2% + 1.5vw) 12.5%
-    font-size: calc(0.25rem + 2.5vw)
-    line-height: calc(0.5rem + 2.5vw)
+    font-size: calc(0.25rem + 2vw)
+    line-height: calc(0.5rem + 2.75vw)
 
 .map
   &--wrapper
@@ -28,15 +28,33 @@
   .contacts
     padding: 10% 0 0
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
   .contacts
-    padding: 12.5% 0 0
-    &__title
-      padding: calc(2% + 2.5vw) 7.5%
+    // padding: 12.5% 0 0
+    // &__title
+    //   padding: calc(2% + 2.5vw) 7.5%
 
 @media screen and ( max-width: 1024px)
   .contacts
-    padding: 10% 0 0
+    padding: 12.5% 0 0
+    &__title
+      font-size: calc(0.5rem + 3vw)
+      line-height: calc(0.5rem + 3vw)
+
+@media screen and ( max-width: 768px)
+  .contacts
+    padding: 17.5% 0 0
+    &__title
+      font-size: calc(0.5rem + 3.5vw)
+      line-height: calc(0.5rem + 3.5vw)
+
+@media screen and ( max-width: 480px)
+  .contacts
+    padding: 25% 0 0
+    &__title
+      font-size: calc(0.5rem + 5vw)
+      line-height: calc(0.5rem + 5vw)
+
 // @media screen and (max-width: 1366px)
 //   .contacts
 //     &--wrapper

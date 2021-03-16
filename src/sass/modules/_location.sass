@@ -4,12 +4,12 @@
     width: 100%
     display: flex
     justify-content: space-between
-    padding: 2.5% 0 0
+    padding: 3.5% 0 0
     background: $blue url('../img/project__map.png') 90% center / 45% no-repeat
 
     &--main
         color: $black
-        padding: 2.5% 0
+        padding: 3.5% 0
         background: $white url('../img/map.png') right center / 50% no-repeat
 
         .location__link-item
@@ -37,17 +37,35 @@
         // margin: 0 auto 0 15%
 
     &--margin
-        margin: 0 auto 0 12.5%
+        & .location--wrapper
+            margin: 0 auto 0 12.5%
 
         & .footer-description
             width: 70%
 
+        & .contacts-form
+            width: 50vw
+
     &__title
-        font-size: calc(0.25rem + 2.25vw)
-        line-height: calc(0.5rem + 2.25vw)
+        font-size: calc(0.25rem + 2vw)
+        line-height: calc(0.5rem + 2.75vw)
+
         width: 100%
         display: flex
         text-align: left
+        position: relative
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            transform: translate(-15%, 0%)
+            width: 100%
+            height: 100%
+            display: block
+            content: "Локація"
+            font-size: calc(5rem + 2.5vw)
+            line-height: calc(0.75rem + 2.75vw)
+            color: rgba(0,0,0,0.15)
 
     &__link
         margin: 1rem 0
@@ -108,14 +126,18 @@
         line-height: calc(0.5rem + 1.25vw)
         color: $white
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
     .location
         &--wrapper
             width: 85%
         &--margin
-            width: 50%
-            & .footer-description
-                width: 100%
+            & .location--wrapper
+                width: 50%
+                & .footer-description
+                    width: 100%
+
+            & .contacts-form
+                width: 50vw
 
 @media screen and ( max-width: 768px)
     .location
@@ -128,16 +150,49 @@
                 font-size: calc(0.5rem + 1.25vw)
                 line-height: calc(0.75rem + 1.5vw)
 
+        &--margin
+            & .footer-description
+                &__title
+                    font-size: calc(.5rem + 0.5vw)
+
+            & .footer-address
+                &__item
+                    font-size: calc(0.5rem + 0.75vw)
+                    line-height: calc(0.75rem + 1vw)
+
+            & .contacts-link
+                &__caption
+                    font-size: calc(0.5rem + 0.75vw)
+                    line-height: calc(0.5rem + 1.75vw)
+
+                &__item
+                    font-size: calc(0.5rem + 0.75vw)
+                    line-height: calc(0.5rem + 1.75vw)
+
+            & .contacts-form
+                width: 60vw
+
+                &__title
+                    font-size: calc(0.5rem + 1.5vw)
+                    line-height: calc(0.5rem + 1.5vw)
+                &__input,
+                &__textarea,
+                &__btn
+                    line-height: calc(0.5rem + 1vw)
+                    font-size: calc(0.5rem + 1vw)
+                    padding: 0.75rem
+
         &__link
             &-item
                 line-height: calc(0.5rem + 1.5vw)
                 font-size: calc(0.5rem + 1vw)
 
     .footer-description
-        width: 75%
+        width: 100%
         &__title
-            // font-size: calc(0.75rem + 1.25vw)
-            // line-height: calc(0.5rem + 1.5vw)
+            text-align: center
+            font-size: calc(0.5rem + 2vw)
+            line-height: calc(0.5rem + 2vw)
 
     .footer-address
         &__item
@@ -153,11 +208,45 @@
             font-size: calc(0.5rem + 1vw)
             line-height: calc(0.5rem + 2vw)
 
-@media screen and ( max-width: 675px)
+@media screen and ( max-width: 700px)
     .location
         background-image: none
         &--wrapper
             align-items: center
+
+        &--margin
+            flex-direction: column-reverse
+
+            & .location--wrapper
+                width: 80%
+                margin: 0 auto
+
+            & .contacts-form
+                width: 60%
+                margin: 2.5vw auto 5vw
+                // margin: -7.5vw auto 5vw
+                padding: 7.5% 5%
+                &__title
+                    font-size: calc(.5rem + 1.75vw)
+
+            & .footer-description
+                &__title
+                    font-size: calc(.5rem + 2.25vw)
+                    line-height: calc(.5rem + 2.75vw)
+
+            & .footer-address
+                &__item
+                    font-size: calc(0.5rem + 1.75vw)
+                    line-height: calc(0.75rem + 1.75vw)
+
+            & .contacts-link
+                &__caption
+                    font-size: calc(0.5rem + 1.75vw)
+                    line-height: calc(0.75rem + 2.5vw)
+
+                &__item
+                    font-size: calc(0.5rem + 1.75vw)
+                    line-height: calc(0.75rem + 2.5vw)
 
     .footer-description
         display: grid
@@ -180,3 +269,63 @@
         grid-column: 1/2
         grid-row: 2/3
         margin: calc(0.5rem + 1.75vw) 0
+
+@media screen and ( max-width: 480px)
+    .location
+        &__title
+            font-size: calc(0.25rem + 6vw)
+            line-height: calc(0.5rem + 6vw)
+
+        &--main
+            .footer-description__title
+                width: 100%
+                font-size: calc(0.5rem + 1.75vw)
+                line-height: calc(0.75rem + 3vw)
+
+        &__link
+            &-item
+                line-height: calc(0.5rem + 3vw)
+                font-size: calc(0.5rem + 2vw)
+
+        &--margin
+            flex-direction: column-reverse
+
+            & .contacts-form
+                width: 80vw
+                height: auto
+                // margin: -15vw auto 5vw
+                padding: 7.5% 5%
+                &__title
+                    font-size: calc(.5rem + 1.75vw)
+
+    .footer-description
+        &__title
+            font-size: calc(0.5rem + 1.75vw)
+            line-height: calc(0.75rem + 2vw)
+
+    .footer-address
+        &__item
+            font-size: calc(0.5rem + 2vw)
+            line-height: calc(0.5rem + 2.25vw)
+
+    .contacts-link
+        &__caption
+            font-size: calc(0.5rem + 2vw)
+            line-height: calc(0.5rem + 3vw)
+
+        &__item
+            font-size: calc(0.5rem + 2vw)
+            line-height: calc(0.5rem + 3vw)
+
+@media screen and (max-device-width: 767px) and (min-device-width: 320px) and (orientation: landscape)
+    .location
+        &--margin
+            & .contacts-form
+                display: flex
+                grid-gap: 0
+                padding: 2.5rem
+
+                &__input,
+                &__textarea,
+                &__btn
+                    margin: auto

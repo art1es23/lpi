@@ -3,14 +3,14 @@
 .header
   width: 75%
   display: flex
-  justify-content: space-between
+  justify-content: flex-end
   align-items: center
   background-color: rgba($white, 1)
   position: fixed
   top: 0
   left: 0
   z-index: 9999
-  padding: 0 2.5%
+  padding: 0 5%
   top: 5%
   transition: all 0.3s ease
 
@@ -23,6 +23,27 @@
     top: 0%
     transition: all 0.3s ease-in-out
 
+  &--fullpage
+    flex-direction: column
+    width: 100%
+    height: 100vh
+    // justify-content: space-around
+    justify-content: center
+    & .logo,
+    & .chooseLanguage
+      margin: 0 auto
+
+    & .logo
+      width: 50%
+      &__caption
+        font-size: calc(0.5rem + 1vw)
+        line-height: calc(0.5rem + 1.5vw)
+
+    & .chooseLanguage
+      display: none
+      &__item
+        font-size: calc(0.5rem + 1vw)
+
 @media screen and (max-width: 1366px)
   .header
     width: 85%
@@ -34,8 +55,26 @@
   .header
     width: 100%
     top: 0
+    &--fullpage
+      & .logo
+        width: 37.5%
 
-// @media screen and (max-width: 1224px)
+@media screen and ( max-width: 768px)
+  .header
+    &--fullpage
+      & .logo
+        width: 45%
+        &__caption
+          font-size: calc(0.5rem + 1.5vw)
+          line-height: calc(0.5rem + 2vw)
+
+@media screen and ( max-width: 480px)
+  .header
+    &--fullpage
+      & .logo
+        width: 75%
+
+// @media screen and (max-width: 1280px)
 //   .header
 //     justify-content: space-between
 //     transition: $transition

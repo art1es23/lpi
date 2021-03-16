@@ -17,11 +17,9 @@
             </a>
         </div>
 
-        <a class="menu"><span></span></a>
-
         <nav class="navigation">
             <ul class="navigation--wrapper">
-                <li class="navigation__item"><a href="#" class="navigation__link">Послуги</a></li>
+                <li class="navigation__item"><a href="./services.html" class="navigation__link">Послуги</a></li>
                 <li class="navigation__item"><a href="./projects.html" class="navigation__link">Проекти</a></li>
                 <li class="navigation__item"><a href="./clients.html" class="navigation__link">Клієнти</a></li>
                 <li class="navigation__item"><a href="./company.html" class="navigation__link">Компанія</a></li>
@@ -35,6 +33,8 @@
             <button class="chooseLanguage__item">RU</button>
             <button class="chooseLanguage__item">EN</button>
         </div>
+
+        <a class="menu-toggle"><span></span></a>
 
     </header>
 
@@ -81,7 +81,7 @@
                         </span>
                     </li>
             
-                    <li class="services-box-group__item services-description">
+                    <li class="services-box-group__item services-box-group__item--right services-description">
                         <span class="services-description__number">02</span>
                         <span class="services-description__icon services-description__icon2"></span>
                         <div class="services-description--wrapper">
@@ -111,7 +111,7 @@
                         </span>
                     </li>
             
-                    <li class="services-box-group__item services-description">
+                    <li class="services-box-group__item services-box-group__item--right services-description">
                         <span class="services-description__number">04</span>
                         <span class="services-description__icon services-description__icon4"></span>
                         <div class="services-description--wrapper">
@@ -126,7 +126,7 @@
                         </span>
                     </li>
             
-                    <li class="services-box-group__item services-description">
+                    <li class="services-box-group__item services-box-group__item--last services-description">
                         <span class="services-description__number">05</span>
                         <span class="services-description__icon services-description__icon5"></span>
                         <div class="services-description--wrapper">
@@ -143,9 +143,10 @@
                 </ul>
 
                 <div class="services__link">
-                    <a class="services__link--item" href="">
-                        <span>Додаткові послуги</span>
-                        <span>&gt;</span>
+                    <a class="services__link--item link" href="">
+                        <span class="link__caption">Додаткові послуги</span>
+                        <span class="link__arrow">&#10230;</span>
+                        
                     </a>
                 </div>
             </div>
@@ -208,7 +209,7 @@
             <!-- <label for="content-topic"></label> -->
             <textarea class="contacts-form__textarea" name="topic" placeholder="Що саме вас цікавить?" id="content-topic" cols="30" rows="1"></textarea>
             <!-- <label for="content-comment"></label> -->
-            <textarea class="contacts-form__textarea" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
+            <textarea class="contacts-form__textarea input-comment" name="topic" placeholder="Залиште коментар" id="content-comment" cols="30" rows="1"></textarea>
             <button type="submit" class="contacts-form__btn submit">Відправити</button>
             <button type="reset" class="contacts-form__btn close" data-close-modal>Close</button>
         </form>

@@ -5,6 +5,6 @@ import modals from './modules/modalForm';
 document.addEventListener('DOMContentLoaded', () => {
     "use sctrict";
 
-    navMenu('.header', '.navigation', '.link', 'header--adaptive', 'header--fixed');
+    navMenu('.header', '.navigation', '.menu-toggle', 'header--adaptive', 'header--fixed');
     modals();
 });

@@ -9,9 +9,21 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: true,
     speed: 600,
+    autoplay: true,
     responsive: [{}, {
       breakpoint: 769,
       settings: {
+        dots: false
+      }
+    }, {
+      breakpoint: 700,
+      settings: {
+        dots: false
+      }
+    }, {
+      breakpoint: 700,
+      settings: {
+        arrows: false,
         dots: false
       }
     }, {
@@ -27,6 +39,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     dots: false,
     speed: 600,
+    autoplay: true,
     responsive: [{
 
     }, {
@@ -38,6 +51,13 @@ $(document).ready(function () {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
+        arrows: false
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        arrows: false
       }
     }, {
       breakpoint: 300,

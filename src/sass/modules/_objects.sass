@@ -15,8 +15,21 @@
         width: 100%
         justify-content: center
         align-items: center
-        font-size: calc(0.25rem + 2.5vw)
+        font-size: calc(0.25rem + 2vw)
         line-height: calc(0.5rem + 2.75vw)
+        position: relative
+        &::before
+            position: absolute
+            top: 0
+            left: 0
+            transform: translate(-15%, 0%)
+            width: 100%
+            height: 100%
+            display: block
+            content: "Об'єкти"
+            font-size: calc(5rem + 2.5vw)
+            line-height: calc(0.75rem + 2.75vw)
+            color: rgba(0,0,0,0.15)
 
     &__blockquote
         bottom: 7.5%
@@ -101,7 +114,7 @@
     align-items: flex-end
     text-align: right
 
-@media screen and ( max-width: 1224px)
+@media screen and ( max-width: 1280px)
     .object
         width: 92.5%
 
@@ -116,3 +129,43 @@
         &__title
             font-size: calc(0.25rem + 4vw)
             line-height: calc(0.5rem + 4vw)
+@media screen and ( max-width: 700px)
+
+    .object
+        margin: 0 auto 5%
+        width: 85%
+
+        &__blockquote
+            bottom: 45%
+            transform: translateY(-25%)
+            left: 0
+            width: 50%
+
+        &__title
+            padding-bottom: 1rem
+
+    .object-box
+        flex-direction: row-reverse
+        flex-wrap: wrap
+        &__item
+            &--big
+                order: 1
+            &--center,
+            &--bottom
+                order: 2
+                width: 50%
+                transform: translateY(0)
+
+            &--bottom
+                transform: translateY(25%)
+
+@media screen and ( max-width: 480px)
+    .object
+        margin-bottom: 10%
+        &__blockquote
+            bottom: 35%
+
+    .object-box
+        &__item
+            &--bottom
+                transform: translateY(50%)

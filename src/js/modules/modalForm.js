@@ -20,7 +20,7 @@ const modals = () => {
         close.addEventListener('click', (e) => {
             windows.forEach(item => item.style.display = 'none');
             modal.style.display = 'none';
-            document.body.overflow = '';
+            document.body.style.overflow = '';
         });
 
         modal.addEventListener('click', (e) => {
