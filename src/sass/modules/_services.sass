@@ -275,3 +275,19 @@
 
     .services-box-group
         width: 100%
+
+    .services-description
+        &:nth-child(2n)
+            & .services-description
+                &__arrow
+                    // right: 0
+                    left: 80%
+                    animation: reverseTranslateRight 1s ease-in-out forwards
+
+                    svg
+                        transform: rotateY(0)
+
+            &:hover
+                & .services-description
+                    &__arrow
+                        animation: .3s ease-in-out forwards arrowTranslateRight
